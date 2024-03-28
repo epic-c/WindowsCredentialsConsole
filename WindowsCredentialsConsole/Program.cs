@@ -4,9 +4,13 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.Write("請輸入 Target ID (網際網路或網路位置): ");
-       
-        var targetId = Console.ReadLine();
+        if (args.Length <= 0)
+        {
+            Console.Write("請輸入 Target ID (網際網路或網路位置)");
+            return;
+        }
+
+        var targetId = args[0];
 
         Console.WriteLine("-----------------------");
 
@@ -18,8 +22,8 @@ internal class Program
             Console.WriteLine($"Password = {storedCred.Password}");
         }
 
-        Console.Write("\n\n按任意鍵退出...");
-        Console.ReadKey(true);
+        //Console.Write("\n\n按任意鍵退出...");
+        //Console.ReadKey(true);
 
         // 參考: https://blog.darkthread.net/blog/windows-credentials-management/
     }
