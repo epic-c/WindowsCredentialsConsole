@@ -18,6 +18,9 @@ internal class Program
             Console.WriteLine($"Password = {storedCred.Password}");
         }
 
+        Console.Write("\n\n按任意鍵退出...");
+        Console.ReadKey(true);
+
         // 參考: https://blog.darkthread.net/blog/windows-credentials-management/
     }
 }
